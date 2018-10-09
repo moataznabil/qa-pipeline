@@ -1,0 +1,3 @@
+ui/TasksUITest.class
+api/TasksAPITest.class
+smoke/TasksSmokeAPITest.class

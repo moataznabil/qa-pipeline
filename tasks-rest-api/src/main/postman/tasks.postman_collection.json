@@ -1,0 +1,299 @@
+{
+	"variables": [],
+	"info": {
+		"name": "tasks",
+		"_postman_id": "e7d9ffe1-387b-6ac3-8373-083413533d29",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a task",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"Pay internet bill\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tasks",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get tasks by description",
+			"request": {
+				"url": {
+					"raw": "{{config.baseUrl}}/api/tasks?description=avocado",
+					"auth": {},
+					"host": [
+						"{{config",
+						"baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "avocado",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get tasks by completed status",
+			"request": {
+				"url": {
+					"raw": "{{config.baseUrl}}/api/tasks?completed=true",
+					"auth": {},
+					"host": [
+						"{{config",
+						"baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "completed",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tasks by description and completed status",
+			"request": {
+				"url": {
+					"raw": "{{config.baseUrl}}/api/tasks?description=karate&completed=true",
+					"auth": {},
+					"host": [
+						"{{config",
+						"baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "karate",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "completed",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get a task by id",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks/5",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update a task",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks/5",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"Pay electricity bill\",\n  \"completed\": false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update a task completed status",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks/5/completed",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"value\": true\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a task",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks/5",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all tasks",
+			"request": {
+				"url": "{{config.baseUrl}}/api/tasks",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all tasks by completed status",
+			"request": {
+				"url": {
+					"raw": "{{config.baseUrl}}/api/tasks?completed=true",
+					"auth": {},
+					"host": [
+						"{{config",
+						"baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "completed",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

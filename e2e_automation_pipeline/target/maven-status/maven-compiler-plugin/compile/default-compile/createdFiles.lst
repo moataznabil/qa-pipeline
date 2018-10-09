@@ -1,0 +1,4 @@
+steps/api/TasksAPISteps.class
+steps/ui/TasksUISteps.class
+steps/api/TasksPageAPISteps.class
+pages/HomePage.class
